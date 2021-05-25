@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Unsplash Clone</title>
+</head>
+<body>
+ <script src="index.js" type="text/javascript"></script>
+<div class="main-container">
+<header>
+    <nav class="navbar">
+      <div class="left">
+        <div class="logo">
+<img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/unsplash-512.png">
+<h1 style="margin-left:40px">Unsplash</h1>
+<p style="margin-left:40px;font-size:12px">Photos for everyone</p>
+</div>
+        <div class="nav-search-form">
+          <form style="position:relative">
+<i class="fa fa-search" style="position: absolute; top: 10px; left:20px"></i>
+<i class="material-icons">&#xe3b5;</i>
+<input type="text" placeholder="Search" id="search">
+          </form>
+        </div>
+      </div>
+      <ul class="nav">
+<li class="list"><a href="#" class="home">Explore</a></li>
+        <li class="list"><a href="#" class="home">We're hiring</a></li>
+        <li class="list"><i class="fa fa-ellipsis-h" id="ellipse" class="home" onclick="toggleIcon()"></i>
+		<div id="mySidenav" class="sidenav">
+		<a href="#">About</a>
+		<a href="#">Wallpapers</a>
+		<a href="#">Blog</a>
+		<a href="#">Topics</a>
+		<a href="#">Collections</a>
+		<a href="#">Community</a>
+		<a href="#">History</a>
+		<a href="#">Made with Unsplash</a>
+		<a href="#">API/Developers</a>
+		<a href="#">Official Apps</a>
+		</div></li>
+        <li class="list"><button class="btn" class="home">Submit</button></li>
+<li class="list"><a href="login.html" class="home">Login</a></li>
+        <li><a href="joinfree.html"class="join" style="width:80px">Join free</a></li>
+<li><i class="fa fa-bars" id="menubar" onclick="toggleMenu()"></i>
+<div id="mySidenav1" class="sidenav1">
+		<a href="#">About</a>
+		<a href="#">Wallpapers</a>
+		<a href="#">Blog</a>
+		<a href="#">Topics</a>
+		<a href="#">Collections</a>
+		<a href="#">Community</a>
+		<a href="#">History</a>
+		<a href="#">Made with Unsplash</a>
+		<a href="#">API/Developers</a>
+		<a href="#">Official Apps</a>
+		<a href="#">Explore</a>
+		<a href="#">We're hiring</a>
+		<a href="login.html" class="home">Login</a>
+        <a href="joinfree.html"class="join"style="margin-left: 20px;margin-right: 20px;margin-bottom: 20px;">Join free</a>
+		<button class="btn" class="home" style="margin-left: 20px;margin-right: 20px;margin-bottom: 20px;width:120px;">Submit a photo</button>
+		</div></li>
+ </ul>
+    </nav>
+   <div class="category-nav" style="width:100vw;overflow-x:scroll;">
+      <div class="category">
+        <a style="cursor:pointer" href="unsplashapi.html">Editorial</a>
+      </div>
+      <div class="category">
+        <button class="wall" onclick="Navsearch('wallpapers');">Wallpapers</button>
+      </div>
+      <div class="category">
+        <button class="texture" onclick="Navsearch('texture');">Texture & Patterns</button>
+      </div>
+      <div class="category">
+        <button class="nature" onclick="Navsearch('nature');">Nature</button>
+      </div>
+      <div class="category">
+        <button class="current-events" onclick="Navsearch('currentevents');">Current Events</button>
+      </div>
+      <div class="category">
+        <button class="arhitect" onclick="Navsearch('architecture');">Architecture</button>
+      </div>
+      <div class="category">
+        <button class="business" onclick="Navsearch('business work');">Business & Work</button>
+      </div>
+      <div class="category">
+        <button class="film" onclick="Navsearch('film');">Film</button>
+      </div>
+      <div class="category">
+        <button class="animals" onclick="Navsearch('animals');">Animals</button>
+      </div>
+      <div class="category">
+        <button class="travel" onclick="Navsearch('travel');">Travel</button>
+      </div>
+      <div class="category">
+        <button class="fashion" onclick="Navsearch('fashion');">Fashion</button>
+      </div>
+      <div class="category">
+        <button class="food" onclick="Navsearch('foodanddrink');">Food & Drink</button>
+      </div>
+      <div class="category">
+        <button class="spirituality" onclick="Navsearch('spirituality');">Spirituality</button>
+      </div>
+    </div>
+</header>
+<section class="hero" id="myDIV">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Unsplash</h1>
+        <p>
+          The internet’s source of freely useable images.<br>
+          Powered by creators everywhere.
+        </p>
+        <div class="hero-search-form">
+          <form style="position:relative">
+   <i class="fa fa-search" class="search-icon"style="position: absolute; top: 20px; left:20px"></i>
+<i class="material-icons" id="focus-icon" style="position:absolute;top:18px;right:20px;">&#xe3b5;</i>
+<input type="text" placeholder="Search" id="searchbar">
+          </form>
+        </div>
+        <div class="trending-search-tags">
+          <p>Trending searches: <a href="#">flower</a>, <a href="#">wallpaper</a>, <a href="#">sad</a>, <a href="#">love</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+     <div class="container">
+            <div class="image-grid" id="imagediv">
+           </div>
+       </div>
+</div>
+    </body>
+</html>
+
